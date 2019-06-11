@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="j2store" method="upgrade">
+    <name>Campaign Rabbit</name>
+    <version>1.0.24</version>
+    <creationDate>SEP 2018</creationDate>
+    <author>Alagesan</author>
+    <authorEmail>supports@j2store.org</authorEmail>
+    <authorUrl>https://www.j2store.org</authorUrl>
+    <copyright>2018 Cartrabbit</copyright>
+    <license>GNU General Public License v3 or later</license>
+    <description>The app used to syncronize with Campaign Rabbit</description>
+    <scriptfile>script.app_campaignrabbit.php</scriptfile>
+    <files>
+        <filename plugin="app_campaignrabbit">app_campaignrabbit.php</filename>
+        <folder>app_campaignrabbit</folder>
+        <folder>library</folder>
+        <filename>index.html</filename>
+    </files>
+    <languages>
+        <language tag="en-GB">languages/en-GB.plg_j2store_app_campaignrabbit.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" label="J2STORE_CAMPAIGNRABBIT_CONNECT_SETTINGS">
+                <field name="app_id" type="text"
+                       label="j2store_campaignrabbit_app_id"
+                       description="j2store_campaignrabbit_app_id_desc"
+                />
+
+                <field name="api_token" type="text"
+                       label="j2store_campaignrabbit_token"
+                       description="j2store_campaignrabbit_token_desc"
+                />
+
+                <field name="connect" label="j2store_campaignrabbit_verification" type="campaignconnect" addfieldpath="plugins/j2store/app_campaignrabbit/app_campaignrabbit/fields"/>
+            </fieldset>
+
+            <fieldset name="order_settings" label="j2store_campaignrabbit_order_settings">
+
+                <field name="enable_opt_in" type="radio" default="0" class="btn-group"
+                       label="j2store_campaignrabbit_enable_opt_in"
+                       description="j2store_campaignrabbit_enable_opt_in_desc">
+                    <option value="0">J2STORE_NO</option>
+                    <option value="1">J2STORE_YES</option>
+                </field>
+
+                <field name="enable_double_opt_in" type="radio" default="0" class="btn-group"
+                       label="j2store_campaignrabbit_enable_double_opt_in"
+                       description="j2store_campaignrabbit_enable_double_opt_in_desc">
+                    <option value="0">J2STORE_NO</option>
+                    <option value="1">J2STORE_YES</option>
+                </field>
+
+                <field name="opt_in_text" type="text" class="input-large"  default="J2STORE_CAMPAIGN_OPT_IN_TEXT_DEFAULT"
+                       label="j2store_campaign_opt_in_text" description="j2store_campaign_opt_in_text_desc" />
+
+
+                <field name="synch_zero_order" type="radio" default="1" class="btn-group" label="j2store_campaignrabbit_synch_zero_order" description="j2store_campaignrabbit_synch_zero_order_desc">
+                    <option value="0">J2STORE_NO</option>
+                    <option value="1">J2STORE_YES</option>
+                </field>
+
+                <field name="orderstatus" type="orderstatuslist" multiple="multiple" default="*" label="j2store_campaignrabbit_orderstatuslist" description="j2store_campaignrabbit_orderstatuslist_desc"
+                       addfieldpath="/administrator/components/com_j2store/models/fields"/>
+
+                <field name="debug" type="radio" default="0" class="btn-group" label="j2store_campaignrabbit_debug" description="j2store_campaignrabbit_debug_desc">
+                    <option value="0">J2STORE_NO</option>
+                    <option value="1">J2STORE_YES</option>
+                </field>
+                <field name="campaign_cronurl" type="cronurl" label="j2store_campaignrabbit_cronurl" addfieldpath="plugins/j2store/app_campaignrabbit/app_campaignrabbit/fields"/>
+            </fieldset>
+
+            <fieldset name="synchronize" label="J2STORE_CAMPAIGNRABBIT_LABEL_SYNCHRONIZE">
+
+                <field name="syn_manual" type="radio" default="0" class="btn-group" label="J2STORE_APP_CAMPAIGNRABBITCRM_SYN_MANUAL" description="J2STORE_APP_CAMPAIGNRABBITCRM_SYN_MANUAL_DESC">
+                    <option value="0">J2STORE_NO</option>
+                    <option value="1">J2STORE_YES</option>
+                </field>
+                <field name="patch_count" type="list" class="input-large"  default="20"
+                       label="j2store_campaign_patch_count" description="j2store_campaign_patch_count_desc" >
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="200">200</option>
+                </field>
+
+                <field name="customer_syn" type="customersyncronize" default="" label="J2STORE_APP_CAMPAIGNRABBITCRM_CUSTOMERSYNCRONIZE" description="J2STORE_APP_CAMPAIGNRABBITCRM_CUSTOMERSYNCRONIZE_DESC"
+                       addfieldpath="/plugins/j2store/app_campaignrabbit/app_campaignrabbit/fields"/>
+                <field name="invoice_syn" type="invoicesyncronize" default="" label="J2STORE_APP_CAMPAIGNRABBITCRM_INVOICESYNCRONIZE" description="J2STORE_APP_CAMPAIGNRABBITCRM_INVOICESYNCRONIZE_DESC"
+                       addfieldpath="/plugins/j2store/app_campaignrabbit/app_campaignrabbit/fields"/>
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>

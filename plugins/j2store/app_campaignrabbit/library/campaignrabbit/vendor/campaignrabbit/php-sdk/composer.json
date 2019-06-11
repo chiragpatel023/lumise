@@ -1,0 +1,26 @@
+{
+
+    "name": "campaignrabbit/php-sdk",
+    "description": "CampaignRabbit PHP Client Library",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Alagesan",
+            "email": "hello@campaignrabbit.com"
+        }
+    ],
+    "minimum-stability": "stable",
+
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "CampaignRabbit\\CampaignRabbit\\": "src/"
+
+        }
+
+    }
+}

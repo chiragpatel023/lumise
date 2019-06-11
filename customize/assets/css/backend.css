@@ -1,0 +1,576 @@
+
+.lumise-loading {
+    display: inline-block;
+    background: rgb(255, 255, 255) url(../../core/assets/images/loading.gif) no-repeat center center;
+    width: 34px;
+    height: 34px;
+    background-size: 30px;
+    border-radius: 100%;
+}
+
+.lumise-spinner {
+    height: 20px;
+    width: 20px;
+    background: url(../../core/assets/images/spinner.png) center center no-repeat;
+    background-size: 20px;
+    animation: 2s cubic-bezier(.63,.045,.34,1) 0s normal none infinite ka-spinner;
+    display: inline-block;
+    position: relative;
+    bottom: -2px;
+}
+
+@keyframes ka-spinner {
+    0% {
+        transform: scale(1) rotate(0)
+    }
+
+    100% {
+        transform: scale(1) rotate(720deg)
+    }
+}
+
+.center {
+    text-align: center !important;
+}
+
+.lumise-spinner.white {
+    background-image: url(../../core/assets/images/spinner-white.png)
+}
+
+.lumise-spinner.x2 {
+    height: 24px;
+    width: 24px;
+    background-size: 24px
+}
+
+.lumise-spinner.x3 {
+    height: 30px;
+    width: 30px;
+    background-size: 30px
+}
+
+.lumise-spinner.x4 {
+    height: 40px;
+    width: 40px;
+    background-size: 40px
+}
+
+.lumise-spinner.x5 {
+    height: 50px;
+    width: 50px;
+    background-size: 50px
+}
+#lumise-cart-wrp form{
+    padding: 20px 25px;
+    text-align: left;
+}
+#lumise-cart-wrp form select {
+    display: inline-block;
+    width: 300px;
+    height: 35px;
+    padding-left: 10px;
+    color: #333;
+    font-size: 14px;
+    border: 1px solid #999;
+    margin: 13px 0 0;
+}
+#lumise-cart-wrp form > label,
+.woocommerce-variation-add-to-cart > label{
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-top: 11px;
+    font-weight: 600;
+}
+.cart-external{
+    padding: 20px;
+    text-align: left;
+}
+.cart-external .cart a {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #333;
+    font-weight: 700;
+    margin-top: 10px;
+
+}
+.cart-group > button {
+    margin-top: 15px;
+}
+.cart-group input.input-text.qty.text{
+    width: 350px;
+}
+#lumise-cart-wrp form table {
+    margin-bottom: 0px;
+}
+#lumise-cart-wrp form table tr td label {
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 13px;
+}
+
+#lumise-cart-wrp form table tr{
+    border-bottom: 0;
+}
+#lumise-cart-wrp form table tr td{
+    text-transform: uppercase;
+    display: table;
+}
+#lumise-cart-wrp form table tr td > a {
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+#lumise-cart-wrp .attrs-wrap{
+    text-align: left;
+}
+#lumise-cart-wrp .attrs-wrap label{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 11px 0;
+}
+#lumise-cart-wrp .attrs-wrap input {
+    width: 300px;
+    border: 1px solid #999;
+    height: 35px;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+#lumise-cart-wrp .quantity input {
+    border: 1px solid #999;
+    margin: 10px 0 20px 0px;
+    max-width: 300px;
+    display: inline-block;
+    padding: 5px 5px 5px 15px;
+    height: 37px;
+    color: #333;
+}
+
+#lumise-cart-wrp  button {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+
+ #woocommerce-product-data ul.wc-tabs li.lumise_tab a:before{
+    content: "\f513";
+}
+
+#lumise_product_data{
+    padding: 20px 0px;
+    text-align: center;
+}
+#lumise_product_data>h5{
+	font-size: 14px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    text-align: left;
+}
+#lumise-product-base{
+	min-height: 60px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+#lumise-product-base.set-product{
+    border-bottom: 1px solid #eee;
+}
+#lumise-product-base>a[data-func]{
+	display: inline-block;
+	margin: 0 5px;
+	text-decoration: none;
+}
+#lumise-product-base a.button, 
+#lumise-product-base .lumise-edit-zone{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+#lumise-product-base .lumise-product-edit-zone{
+	position: relative;
+	display: block;
+}
+#lumise-product-base .lumise-edit-zone{
+	border: 1px dashed #ccc;
+}
+#lumise-product-base a.button{
+	transition: all 250ms ease;
+	opacity: 0;	
+}
+#lumise-product-base:hover a.button{
+	opacity: 1;
+}
+#lumise_product_data a.button i{
+	font-size: 16px;
+    line-height: inherit;
+}
+
+#lumise-lightbox {
+    position: fixed;
+    z-index: 1000000000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Roboto";
+    font-size: 14px;
+    color: #3a3a3a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#lumise-lightbox .kalb-overlay {
+    position: fixed;
+    z-index: 1;
+    background: rgba(0,0,0,.75);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0
+}
+
+#lumise-lightbox #lumise-lightbox-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    max-height: 100vh;
+    background: #f2f2f2;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px 0 rgba(10,10,10,.35);
+    overflow: hidden;
+}
+
+#lumise-lightbox #lumise-lightbox-footer {
+    width: 100%;
+    float: left;
+    background: #eee;
+    border-top: 1px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: relative
+}
+
+#lumise-lightbox #lumise-lightbox-footer a {
+    color: #ff66a6
+}
+
+#lumise-lightbox #lumise-lightbox-footer button+button {
+    margin-left: 20px
+}
+
+#lumise-lightbox #lumise-lightbox-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0px;
+    width: auto;
+    height: inherit;
+    min-width: 850px;
+    box-sizing: border-box;
+    max-height: calc(90vh - 82px);
+    min-height: 250px;
+}
+#lumise-lightbox #lumise-lightbox-content.full-screen {
+    height: 99vh;
+    max-height: 99vh;
+}
+#lumise-lightbox #lumise-lightbox-content i.lumise-spinner {
+    margin-top: 120px;
+}
+
+#lumise-lightbox #lumise-lightbox-content iframe {
+    width: 100%;
+    border: none;
+    height: calc(90vh - 82px);
+    float: left;
+}
+#lumise-lightbox #lumise-lightbox-content.full-screen iframe{
+    height: calc(99vh);	
+}
+#lumise-lightbox #lumise-lightbox-content textarea.s1 {
+    width: 450px;
+    height: 80px;
+    border: 1px solid #ddd;
+    padding: 8px;
+    font: 15px/1.6em Helvetica Neue,Roboto,sans-serif;
+    color: #555
+}
+
+#lumise-lightbox #lumise-lightbox-content h3.title {
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    width: 100%;
+    text-overflow: ellipsis;
+    padding-left: 20px;
+    text-transform: capitalize;
+    color: #3a3a3a;
+    letter-spacing: .5px;
+    font-size: 18px;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+#lumise-lightbox #lumise-lightbox-content h3.title a {
+    text-decoration: none;
+    text-transform: initial;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0px;
+    margin-left: 10px;
+    color: #3f4652;
+    background-color: #dcdcdc;
+    padding: 0px 10px;
+    border-radius: 2px;
+    height: 28px;
+    display: inline-block;
+    line-height: 26px;
+}
+
+#lumise-lightbox #lumise-lightbox-content h3.title a:hover {
+    background: #3f4652;
+    color: #eee;
+}
+
+#lumise-lightbox #lumise-lightbox-content h3.title a i {
+    font-size: 16px;
+    bottom: -3px;
+    position: relative;
+}
+
+#lumise-lightbox a.kalb-close {
+    font-size: 18px;
+    padding: 14px;
+    color: #ccc;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    opacity: .2;
+    z-index: 3;
+}
+#lumise-lightbox a.kalb-close i{
+	font-size: 30px;
+}
+#lumise-lightbox #lumise-lightbox-body:hover a.kalb-close {
+    opacity: 1
+}
+
+#lumise-lightbox a.kalb-close:hover {
+    color: #f70961
+}
+
+
+#lumise-lightbox #lumise-list-items-wrp {float: left;background: #3f4652;width: 100%;}
+
+#lumise-lightbox #lumise-list-items-wrp ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#lumise-lightbox #lumise-list-items-wrp ul[data-view="categories"] {
+    float: left;
+    width: 260px;
+    overflow: auto;
+    max-height: calc(90vh - 122px);
+}
+#lumise-lightbox #lumise-list-items-wrp ul[data-view="categories"]>h3 {
+    text-transform: uppercase;
+    font-size: 13px;
+    background: rgb(47, 51, 58);
+    margin: 0px;
+    padding: 18px 15px;
+    color: #eee;
+    letter-spacing: .5px;
+}
+#lumise-lightbox #lumise-list-items-wrp ul[data-view="categories"] li {
+    padding: 10px 10px 10px 12px;
+    font-size: 15px;
+    text-transform: capitalize;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #ccc;
+    margin: 0px;
+}
+#lumise-lightbox #lumise-list-items-wrp ul[data-view="categories"] li[data-lv="0"]:before{
+    content: "\f345";
+    font-family: dashicons;
+    padding: 0;
+    opacity: .75;
+}
+#lumise-lightbox #lumise-list-items-wrp ul[data-view="categories"] li:hover {
+    background: rgba(238, 238, 238, 0.07);
+}
+#lumise-lightbox #lumise-list-items-wrp ul[data-view="categories"] li.active{
+    background: #3fc7ba;
+    color: #eee;
+    border-bottom-color: #3fc7ba;
+}
+#lumise-lightbox #lumise-list-items-wrp ul[data-view="categories"] li:last-child {
+	border-bottom: none;
+}
+#lumise-lightbox #lumise-list-items-wrp ul[data-view="categories"] li:not([data-lv="0"]){
+    padding-left: 25px;
+}
+#lumise-lightbox #lumise-list-items-wrp ul[data-view="items"] {
+    float: left;
+    width: calc(100% - 260px);
+    background: #f2f2f2;
+    padding: 24px 0 20px 0;
+    overflow: auto;
+    height: calc(90vh - 176px);
+    position: relative;
+    margin-top: 47px;
+}
+#lumise-lightbox #lumise-list-items-wrp h3[data-view="top"] {
+    text-transform: uppercase;
+    font-size: 13px;
+    background: #fafafa;
+    margin: 0px;
+    padding: 8px 2.2%;
+    letter-spacing: .5px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: calc(100% - 260px);
+    z-index: 1;
+    box-shadow: 0px 1px 3px 0 rgba(0,0,0,.1);
+    line-height: 38px;
+}
+#lumise-lightbox #lumise-list-items-wrp h3[data-view="top"] a{
+    text-transform: capitalize;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 0px;
+    background: #e5e5e5;
+    padding: 3px 10px;
+    border-radius: 2px;
+    margin-left: 10px;
+}
+#lumise-lightbox #lumise-list-items-wrp h3[data-view="top"] a i{
+    line-height: inherit;
+    font-size: 14px;
+    height: inherit;
+    width: inherit;
+}
+#lumise-lightbox #lumise-list-items-wrp h3[data-view="top"] a:hover{
+	background: #ddd;	
+}
+#lumise-lightbox #lumise-list-items-wrp h3[data-view="top"] input{
+    height: 34px;
+    border: none;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: inherit;
+    width: 300px;
+    border-radius: 3px;
+    background: #eee;
+    outline: none;
+    font-weight: normal;
+    float: right;
+    margin-right: 30px;
+}
+#lumise-lightbox #lumise-list-items-wrp h3[data-view="top"] input:focus{
+    background: #e5e5e5;
+}
+#lumise-lightbox #lumise-list-items-wrp ul[data-view="items"] li {
+    text-align: center;
+    float: left;
+    cursor: pointer;
+    width: 29.3%;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 1px rgba(0,0,0,.08);
+    margin: 0 0 20px 3%;
+    position: relative;
+}
+#lumise-lightbox #lumise-list-items-wrp ul[data-view="items"] li[data-current="true"]:after{
+    position: absolute;
+    content: "\f147";
+    font-family: dashicons;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: #fff;
+    background: #3fc7ba;
+    border-radius: 100%;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    line-height: 25px;
+}
+#lumise-lightbox #lumise-list-items-wrp ul[data-view="items"] li span[data-view="thumbn"] {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+#lumise-lightbox #lumise-list-items-wrp ul[data-view="items"] li span[data-view="thumbn"]:after {
+    position: absolute;
+    content: attr(data-start);
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+    background: rgba(58, 58, 58, 0.9);
+    color: #eee;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 10px 14px;
+    border-radius: 2px;
+    transition: all 250ms ease;
+    opacity: 0;
+    letter-spacing: .5px;
+}
+#lumise-lightbox #lumise-list-items-wrp ul[data-view="items"] li:hover span[data-view="thumbn"]:after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%);
+}
+#lumise-lightbox #lumise-list-items-wrp ul[data-view="items"] li span[data-view="name"] {
+    font-weight: 600;
+    color: #3A3A3C;
+    text-transform: uppercase;
+    font-size: 12px;
+    display: block;
+    padding: 10px;
+    background: #fafafa;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#lumise-lightbox #lumise-list-items-wrp ul[data-view="items"] li:hover span[data-view="name"] {
+    color: #3fc7ba;
+}
+#lumise-lightbox #lumise-list-items-wrp ul[data-view="items"] li span[data-view="price"] {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #3fc7ba;
+    font-size: 14px;
+    font-weight: 600;
+}
+#lumise-lightbox #lumise-list-items-wrp ul[data-view="items"] li img {
+    max-height: 260px;
+    display: inline-block;
+    max-width: 100%;
+}
+#lumise-lightbox iframe{
+	display: block;
+	width: 100%;
+}
