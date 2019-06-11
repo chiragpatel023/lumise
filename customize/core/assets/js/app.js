@@ -13521,8 +13521,19 @@ jQuery(document).ready(function($) {
 //console.log(cart_design.stages.back.data.screenshot);
 //$.session.set("front", cart_design.stages.front.data.screenshot);
 //$.cookie("test", 1);
-$('.front-image').val(cart_design.stages.front.data.screenshot);
-$('.back-image').val(cart_design.stages.back.data.screenshot);
+var i = 0;
+$.each(cart_design.stages,function(key,value){
+	if(i == 0){
+		$('.front-image').val(value.data.screenshot);
+	}
+	if(i == 1){
+		$('.back-image').val(value.data.screenshot);
+	}
+	i++;
+	
+});
+//$('.front-image').val(cart_design.stages.front.data.screenshot);
+//$('.back-image').val(cart_design.stages.back.data.screenshot);
 $('.j2store-addtocart-form').submit();
 				delete cart_design;
 				delete cart_data;
