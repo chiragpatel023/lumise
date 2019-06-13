@@ -13527,7 +13527,9 @@ $.each(cart_design.stages,function(key,value){
 		$('.front-image').val(value.data.screenshot);
 	}
 	if(i == 1){
-		$('.back-image').val(value.data.screenshot);
+		if(typeof value.data  !== "undefined"){
+			$('.back-image').val(value.data.screenshot);
+		}
 	}
 	i++;
 	
